@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Getting Started
 
+1. Install AirBnB linter, https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
 1. yarn
 1. yarn start
 1. yarn storybook
