@@ -9,7 +9,8 @@ const GenericComponent = (props) => {
 
   return (
     <div className={classnames('style')}>
-      Generic Component { prop }
+      Generic Component
+      { prop }
     </div>
   );
 };
