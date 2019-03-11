@@ -3,6 +3,12 @@ Watch, Learn, Contribute! Live streaming on Sundays, http://www.twitch.tv/AshesO
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Getting Started
+
+1. yarn
+1. yarn start
+1. yarn storybook
+
 ## Available Scripts
 
 In the project directory, you can run:
