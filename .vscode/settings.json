@@ -1,0 +1,3 @@
+{ // JSDOC Type Checking
+  "javascript.implicitProjectConfig.checkJs": true,
+}
