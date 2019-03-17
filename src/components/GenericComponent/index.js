@@ -4,6 +4,11 @@ import { string } from 'prop-types';
 
 import './style.css';
 
+/**
+ * @param {object} props
+ * @param {number} [props.prop]
+ *
+ */
 const GenericComponent = (props) => {
   const { prop } = props;
 

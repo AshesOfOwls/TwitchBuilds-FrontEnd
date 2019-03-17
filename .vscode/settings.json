@@ -1,0 +1,4 @@
+{ // JSDOC Type Checking
+  "javascript.implicitProjectConfig.checkJs": true,
+  "eslint.autoFixOnSave": true,
+}

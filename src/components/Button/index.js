@@ -4,6 +4,15 @@ import { bool, func, node, string } from 'prop-types';
 
 import './style.scss';
 
+
+/**
+ * @typedef {object} Props
+ * @prop {boolean} [disabled]
+ * @prop {function} [onClick]
+ * @prop {string} [size]
+ *
+ * @extends {Component<Props>}
+ */
 class Button extends Component {
   onClick = () => {
     const { disabled, onClick } = this.props;
