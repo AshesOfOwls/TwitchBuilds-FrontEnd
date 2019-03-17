@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { bool, func, node, string } from 'prop-types';
+import {
+  bool, func, node, string,
+} from 'prop-types';
 
 import './style.scss';
-
 
 /**
  * @typedef {object} Props
@@ -14,7 +15,7 @@ import './style.scss';
  * @extends {Component<Props>}
  */
 class Button extends Component {
-  onClick = () => {
+  onClick() {
     const { disabled, onClick } = this.props;
 
     if (disabled) return;
@@ -29,13 +30,13 @@ class Button extends Component {
       <button
         className={classnames('button', size, { disabled })}
         type="button"
-        onClick={this.onClick}
+        onClick={this.onClick.bind(this)}
       >
         { children }
       </button>
     );
   }
-};
+}
 
 Button.defaultProps = {
   disabled: false,
