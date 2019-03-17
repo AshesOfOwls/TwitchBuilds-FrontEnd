@@ -1,10 +1,6 @@
-$blue0: #62a2f2;
-$blue: #5191f1;
-$blue2: #4080e0;
-
 .button {
   align-items: center;
-  background: $blue;
+  background: var(--color-blue2);
   border: 0;
   border-radius: 3px;
   color: #fff;
@@ -18,16 +14,16 @@ $blue2: #4080e0;
 
   &:hover,
   &.hover {
-    background: $blue2;
+    background: var(--color-blue1);
   }
 
   &:active,
   &.active {
-    background: $blue0;
+    background: var(--color-blue3);
   }
 
   &.disabled {
-    background: $blue;
+    background: var(--color-blue2);
     cursor: default;
     opacity: 0.7;
   }
