@@ -7,9 +7,9 @@ import './style.scss';
 
 /**
  * @typedef {object} Props
- * @prop {boolean} disabled
- * @prop {function} onClick
- * @prop {string} size
+ * @prop {boolean} [disabled]
+ * @prop {function} [onClick]
+ * @prop {string} [size]
  *
  * @extends {Component<Props>}
  */
