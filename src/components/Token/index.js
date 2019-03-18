@@ -3,31 +3,45 @@ import classnames from 'classnames';
 import { string } from 'prop-types';
 import Avatar from 'components/Avatar';
 
-import './style.css';
+import './style.scss';
 
 /**
  * @param {object} props
- * @param {number} [props.prop]
+ * @param {string} [props.image]
+ * @param {string} [props.title]
+ * @param {string} [props.subtitle]
  *
  */
 const Token = (props) => {
-  const { prop } = props;
+  const { image, title, subtitle } = props;
 
   return (
-    <div className={classnames('style')}>
-      I am a token
-      <Avatar />
-      { prop }
+    <div className={classnames('token')}>
+      <div className={classnames('token-image')}>
+        <Avatar image={image} />
+      </div>
+      <div className={classnames('token-text')}>
+        <div className={classnames('token-title')}>
+          { title }
+        </div>
+        <div className={classnames('token-subtitle')}>
+          { subtitle }
+        </div>
+      </div>
     </div>
   );
 };
 
 Token.defaultProps = {
-  prop: 'property',
+  image: null,
+  title: null,
+  subtitle: null,
 };
 
 Token.propTypes = {
-  prop: string,
+  image: string,
+  title: string,
+  subtitle: string,
 };
 
 export default Token;

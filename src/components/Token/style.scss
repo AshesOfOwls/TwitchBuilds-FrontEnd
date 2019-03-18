@@ -1,0 +1,21 @@
+.token {
+  display: flex;
+
+  &-image {
+    margin-right: var(--margin-medium);
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    font-size: 14px;
+  }
+
+  &-subtitle {
+    color: var(--color-light-grey);
+    font-size: 12px;
+  }
+}
