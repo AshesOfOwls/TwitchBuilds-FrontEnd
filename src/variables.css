@@ -6,7 +6,8 @@
   --color-light-grey: #606060;
 
   /* SPACING */
-  --margin-small: 3px;
+  --margin-tiny: 3px;
+  --margin-small: 5px;
   --margin-medium: 10px;
   --margin-large: 20px;
 }
