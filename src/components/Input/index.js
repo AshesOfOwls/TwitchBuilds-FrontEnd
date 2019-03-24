@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import Label from 'components/Label';
 import { bool, func, string } from 'prop-types';
 
 import './style.css';
 
 /**
  * @param {object} props
+ * @param {string} [props.label]
  * @param {string} [props.value]
  * @param {boolean} [props.disabled]
  * @param {function} [props.onChange]
@@ -30,17 +32,35 @@ class Input extends Component {
     this.setState({ value });
   }
 
-  render() {
+  renderWrappedInput() {
+    const { label } = this.props;
+
+    if (!label) return this.renderInput();
+
+    return (
+      <Label value={label}>
+        { this.renderInput() }
+      </Label>
+    );
+  }
+
+  renderInput() {
     const { value } = this.state;
 
     return (
+      <input
+        type="text"
+        value={value}
+        className={classnames('input')}
+        onChange={this.onChange.bind(this)}
+      />
+    );
+  }
+
+  render() {
+    return (
       <div className={classnames('inputWrapper')}>
-        <input
-          type="text"
-          value={value}
-          className={classnames('input')}
-          onChange={this.onChange.bind(this)}
-        />
+        { this.renderWrappedInput() }
       </div>
     );
   }
@@ -49,12 +69,14 @@ class Input extends Component {
 Input.defaultProps = {
   disabled: false,
   value: '',
+  label: '',
   onChange: () => {},
 };
 
 Input.propTypes = {
   disabled: bool,
   value: string,
+  label: string,
   onChange: func,
 };
 
