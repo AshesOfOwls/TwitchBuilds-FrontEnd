@@ -45,12 +45,14 @@ class Input extends Component {
   }
 
   renderInput() {
+    const { placeholder } = this.props;
     const { value } = this.state;
 
     return (
       <input
         type="text"
         value={value}
+        placeholder={placeholder}
         className={classnames('input')}
         onChange={this.onChange.bind(this)}
       />
@@ -69,6 +71,7 @@ class Input extends Component {
 Input.defaultProps = {
   disabled: false,
   value: '',
+  placeholder: '',
   label: '',
   onChange: () => {},
 };
@@ -76,6 +79,7 @@ Input.defaultProps = {
 Input.propTypes = {
   disabled: bool,
   value: string,
+  placeholder: string,
   label: string,
   onChange: func,
 };

@@ -5,11 +5,11 @@ import Input from '.';
 
 storiesOf('Input', module)
   .add('default', () => (
-    <Input onChange={action('onChange')} />
+    <Input placeholder="Default" onChange={action('onChange')} />
   ))
   .add('with label', () => (
-    <Input label="Username" onChange={action('onChange')} />
+    <Input label="Username" placeholder="Enter Username" onChange={action('onChange')} />
   ))
   .add('disabled', () => (
-    <Input disabled onChange={action('onChange')} />
+    <Input disabled placeholder="Disabled" onChange={action('onChange')} />
   ));
