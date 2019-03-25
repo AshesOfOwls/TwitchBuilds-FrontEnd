@@ -9,6 +9,8 @@ import './style.css';
  * @param {object} props
  * @param {string} [props.label]
  * @param {string} [props.value]
+ * @param {string} [props.placeholder]
+ * @param {string} [props.type]
  * @param {boolean} [props.disabled]
  * @param {function} [props.onChange]
  *
@@ -45,12 +47,12 @@ class Input extends Component {
   }
 
   renderInput() {
-    const { placeholder } = this.props;
+    const { type, placeholder } = this.props;
     const { value } = this.state;
 
     return (
       <input
-        type="text"
+        type={type}
         value={value}
         placeholder={placeholder}
         className={classnames('input')}
@@ -73,6 +75,7 @@ Input.defaultProps = {
   value: '',
   placeholder: '',
   label: '',
+  type: 'text',
   onChange: () => {},
 };
 
@@ -81,6 +84,7 @@ Input.propTypes = {
   value: string,
   placeholder: string,
   label: string,
+  type: string,
   onChange: func,
 };
 

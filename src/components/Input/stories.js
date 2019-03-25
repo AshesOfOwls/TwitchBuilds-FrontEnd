@@ -10,6 +10,12 @@ storiesOf('Input', module)
   .add('with label', () => (
     <Input label="Username" placeholder="Enter Username" onChange={action('onChange')} />
   ))
+  .add('password', () => (
+    <Input label="Password" type="password" onChange={action('onChange')} />
+  ))
+  .add('checkbox', () => (
+    <Input label="Checkbox" type="checkbox" onChange={action('onChange')} />
+  ))
   .add('disabled', () => (
     <Input disabled placeholder="Disabled" onChange={action('onChange')} />
   ));
