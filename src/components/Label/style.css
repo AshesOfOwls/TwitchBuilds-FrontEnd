@@ -1,0 +1,10 @@
+.label {
+  position: relative;
+}
+
+.labelText {
+  color: var(--color-light-grey);
+  font-size: 11px;
+  margin-bottom: var(--margin-tiny);
+  text-transform: uppercase;
+}

@@ -6,6 +6,11 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@storybook/addon-actions": "^5.0.1",
+    "@storybook/addon-links": "^5.0.1",
+    "@storybook/addons": "^5.0.1",
+    "@storybook/react": "^5.0.1",
+    "@storybook/storybook-deployer": "^2.8.1",
     "classnames": "^2.2.6",
     "faker": "^4.1.0",
     "global": "^4.3.2",
@@ -39,7 +44,14 @@
             ".jsx"
           ]
         }
-      ]
+      ],
+      "jsx-a11y/label-has-for": [ 2, {
+        "components": [],
+        "required": {
+            "every": [ "nesting", "id" ]
+        },
+        "allowChildren": true
+      }]
     },
     "settings": {
       "import/resolver": {
@@ -60,11 +72,6 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.3.4",
-    "@storybook/addon-actions": "^5.0.1",
-    "@storybook/addon-links": "^5.0.1",
-    "@storybook/addons": "^5.0.1",
-    "@storybook/react": "^5.0.1",
-    "@storybook/storybook-deployer": "^2.8.1",
     "babel-loader": "^8.0.5",
     "eslint": "5.12.0",
     "eslint-config-airbnb": "17.1.0",
